@@ -11,12 +11,13 @@ import pickle
 import Queue
 import logging
 
-udp_port = 5000
-tcp_port = 8000
+udp_port = 5000 # status update listening port for nodes in the "nodes" list
+tcp_port = 8000 # status monitor page is hosted on http://<MY_ADDRESS>:8000
 status_interval = 180.0 # number of seconds in between sending updates
 max_in_threads = 20
 max_out_threads = 40
-home_dir = "/home/ubc_eece411_3"
+max_nodes_forward = 8 # max number of nodes to forward a status
+home_dir = "."
 logging.basicConfig(filename="%s/status_monitor.log" % home_dir,level=logging.DEBUG,format='%(asctime)s %(message)s',datefmt='%m/%d/%Y %I:%M:%S %p')
 
 queue_in = Queue.Queue()
@@ -25,13 +26,13 @@ node_port = {}
 node_status = {}
 node_updated = {}
 
-with open("%s/nodes_known" % home_dir, "r") as f:
+with open("%s/nodes" % home_dir, "r") as f:
     for line in f:
         node = line.strip()
         node_port[node] = udp_port
         node_updated[node] = int(time.time())
 
-num_forward = min(8, len(node_port) - 1) # number of hosts to forward statuses
+num_forward = min(max_nodes_forward, len(node_port) - 1) # number of hosts to forward statuses
 
 class Status:
     def __init__(self):
