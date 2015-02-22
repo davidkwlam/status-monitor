@@ -30,9 +30,9 @@ Since a node is supposed to emit an update every T seconds, the likelihood of a 
 
   ((1 - M/(N-1)) ^ (N-1)) ^ 4 = likelihood of not receiving a status update S from ANY node in the last T*4 seconds
 
-Since N ~= 160 and M=8, the likelihood of node A not receiving a status update from node B’s (despite sending one) in the last T*4 secs is 5.5e-15 (i.e. this is the % inaccuracy). 
+If N=160 and M=8, the likelihood of node A not receiving a status update from node B in the last T*4 seconds (despite sending one) is 5.5e-15 (i.e. this is the % inaccuracy). 
 
-Note: this doesn’t consider dropped packets though the increase in % inaccuracy should not be material for this number of nodes. Since M=8 nodes are chosen at random to be sent a status update, even a 50% packet loss means that on average M*50% = 4 servers will receive it.
+Note: this doesn’t consider dropped packets, though the increase in % inaccuracy should not be material for this number of nodes. Since M=8 nodes are chosen at random to be forwarded a status update, even a 50% packet loss means that on average M*50% = 4 servers will receive it.
 
 #####The information displayed can be easily extended
 
