@@ -1,4 +1,6 @@
-Notes
+#Status Monitor
+
+###Notes
 
 1.) The architecture is a modified gossip protocol. 
 
@@ -31,6 +33,6 @@ Note: this doesn’t consider dropped packets though the increase in % inaccurac
 
 -the webpage displays the node’s list of last received status updates from each node:
 
-Green = last status received <T*2 seconds ago
-Yellow = last status received between T*2 and T*4 seconds ago
-Red = last status received >T*4 seconds ago
+Green: last status received <T*2 seconds ago
+Yellow: last status received between T*2 and T*4 seconds ago
+Red: last status received >T*4 seconds ago
