@@ -33,6 +33,6 @@ Note: this doesn’t consider dropped packets though the increase in % inaccurac
 
 -the webpage displays the node’s list of last received status updates from each node:
 
-Green: last status received <T*2 seconds ago
-Yellow: last status received between T*2 and T*4 seconds ago
-Red: last status received >T*4 seconds ago
+1. Green: last status received <T*2 seconds ago 
+2. Yellow: last status received between T*2 and T*4 seconds ago
+3. Red: last status received >T*4 seconds ago
