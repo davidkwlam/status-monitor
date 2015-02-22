@@ -22,10 +22,13 @@ Nodes will halt forwarding status updates to nodes that are down until until the
 
 Since a node is supposed to emit an update every T seconds, the likelihood of a node not receiving a sent status update in the last T*4 seconds is:
 
-M/(N-1) = likelihood of being forwarded a status update S from another node (N = # participating nodes, M = # of nodes chosen for status forwarding)
-1 - M/(N-1) = likelihood of not receiving a status update S from a single node
-(1 - M/(N-1)) ^ (N-1) = likelihood of not receiving a status update S from ANY node
-((1 - M/(N-1)) ^ (N-1)) ^ 4 = likelihood of not receiving a status update S from ANY node in the last T*4 seconds
+  M/(N-1) = likelihood of being forwarded a status update S from another node (N = # participating nodes, M = # of nodes chosen for status forwarding)
+
+  1 - M/(N-1) = likelihood of not receiving a status update S from a single node
+
+  (1 - M/(N-1)) ^ (N-1) = likelihood of not receiving a status update S from ANY node
+
+  ((1 - M/(N-1)) ^ (N-1)) ^ 4 = likelihood of not receiving a status update S from ANY node in the last T*4 seconds
 
 Since N ~= 160 and M=8, the likelihood of node A not receiving a status update from node B’s (despite sending one) in the last T*4 secs is 5.5e-15 (i.e. this is the % inaccuracy). 
 
