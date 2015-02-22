@@ -8,7 +8,7 @@ Add participanting nodes to the nodes file (with each hostname on separate lines
 
 The script can be run without arguments ("python status_monitor.py").
 
-To see the status page at a node, go to http://<NODENAME>:8000.
+To see the status page at a node, go to http://MY.NODES.ADDRESS:8000.
 
 ###Notes
 
