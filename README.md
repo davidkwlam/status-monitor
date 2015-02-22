@@ -1,5 +1,15 @@
 #Status Monitor
 
+A status monitor for machines that is robust to failures at any node. Each node displays its current knowledge of the status of others nodes.
+
+###Usage
+
+Add participanting nodes to the nodes file (with each hostname on separate lines). Note that only a subset of nodes need be added to this list.
+
+The script can be run without arguments ("python status_monitor.py").
+
+To see the status page at a node, go to http://<NODENAME>:8000.
+
 ###Notes
 
 #####The architecture is a modified gossip protocol
