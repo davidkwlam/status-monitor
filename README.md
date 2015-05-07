@@ -2,7 +2,9 @@
 
 A status monitor for machines that is robust to failures at any node. Each node displays its current knowledge of the status of others nodes.
 
-###Usage
+This was a [project](https://docs.google.com/document/d/1BN4zy_GuULoglgjsYFoZ37HBJKIypOw9U3lJzRVUOqk/pub) for a [distributed systems course](https://docs.google.com/document/d/1aMDAbNkqoaPDwOpU1lhl1ivfweAcnOJ_Lb-auOgsp14/pub) taken at UBC.
+
+##Usage
 
 Add participanting nodes to the nodes file (with each hostname on separate lines). Note that only a subset of nodes need be added to this list.
 
@@ -10,7 +12,7 @@ The script can be run without arguments ("python status_monitor.py").
 
 To see the status page at a node, go to http://MY.NODES.ADDRESS:8000.
 
-###Notes
+##Notes
 
 #####The architecture is a modified gossip protocol
 
