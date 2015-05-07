@@ -2,7 +2,7 @@
 
 A status monitor for machines that is robust to failures at any node. Each node displays its current knowledge of the status of others nodes.
 
-This was a [project](https://docs.google.com/document/d/1BN4zy_GuULoglgjsYFoZ37HBJKIypOw9U3lJzRVUOqk/pub) for a [distributed systems course](https://docs.google.com/document/d/1aMDAbNkqoaPDwOpU1lhl1ivfweAcnOJ_Lb-auOgsp14/pub) taken at UBC.
+This was an [assignment](https://docs.google.com/document/d/1BN4zy_GuULoglgjsYFoZ37HBJKIypOw9U3lJzRVUOqk/pub) for a [distributed systems course](https://docs.google.com/document/d/1aMDAbNkqoaPDwOpU1lhl1ivfweAcnOJ_Lb-auOgsp14/pub) taken at UBC.
 
 ##Usage
 
